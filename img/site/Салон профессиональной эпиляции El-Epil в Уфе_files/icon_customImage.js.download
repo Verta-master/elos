@@ -1,0 +1,48 @@
+
+ymaps.ready(init);
+
+function init () {
+    var myMap = new ymaps.Map("map", {
+            center: [54.750664426185644,55.98522871321098],
+            zoom: 12
+			
+        }),
+		
+        myPlacemark = new ymaps.Placemark([54.76386295442465,56.02331711111447], {
+            // Свойства.
+            hintContent: 'ул. Комсомольская, 159'
+        }, {
+            // Опции.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'https://el-epil.ru/images/pin.png',
+			
+            // Размеры метки.
+            iconImageSize: [37, 49],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-18, -49]
+        }),
+
+        myPlacemark2 = new ymaps.Placemark([54.73695948209539,55.95226972883599], {
+            // Свойства.
+            hintContent: 'ул. Ленина, 63'
+        }, {
+            // Опции.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'https://el-epil.ru/images/pin.png',
+
+            // Размеры метки.
+            iconImageSize: [37, 49],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-18, -49]
+        });
+
+
+    // Добавляем все метки на карту.
+    myMap.geoObjects.add(myPlacemark),
+    myMap.geoObjects.add(myPlacemark2),
+	myMap.behaviors.disable('scrollZoom');
+}

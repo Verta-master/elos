@@ -1,0 +1,29 @@
+.mob-krg{
+	display: none!important;
+}
+
+.des-krg{
+	display: block!important;
+}
+
+@media all and (max-width: 720px){
+	.mob-krg{
+		display: block!important;
+	}	
+
+	.des-krg{
+		display: none!important;
+	}
+}
+
+#g-recaptcha{
+	margin-top: 10px;
+}
+
+.hidden{
+	display: none;
+}
+
+.visible{
+	display: block;
+}

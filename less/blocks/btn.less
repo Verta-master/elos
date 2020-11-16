@@ -1,0 +1,72 @@
+.btn {
+  position: relative;
+  width: 247px;
+  height: 70px;
+//  padding-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1;
+  color: #fff;
+  background-color: #4d9aa4;
+  background-image: linear-gradient(to bottom, #85e9f5, #58bdca);
+  border-bottom: 3px solid #4d9aa4;
+  border-radius: 40px;
+  box-shadow: 0 9px 16px 0 rgba(137,241,254,0.66);
+  overflow: hidden;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    left: -59px;
+    top: 0;
+    bottom: 0;
+    width: 59px;
+    background-image: url(../img/icons/gloss.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: gliss 1.5s ease infinite;
+  }
+  
+  &:hover,
+  &:active {
+    background-image: linear-gradient(to bottom, #87ecf8, #5ed1df);
+  }
+  
+  &--border {
+    color: #54b7c3;
+    background-image: none;
+    background-color: rgba(255,255,255,0);
+    border: 2px solid #4d9aa4;
+    box-shadow: none;
+    
+    &:hover,
+    &:active {
+      background-image: none;
+      color: #5ed1df;
+      border-color: #5ed1df;
+    }
+  }
+}
+
+@keyframes gliss {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+

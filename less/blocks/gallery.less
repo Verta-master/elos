@@ -28,6 +28,8 @@
 .gallery__slide {
   box-sizing: border-box;
   height: auto;
+  opacity: 0.5;
+  .transition();
   
   a {
     display: flex;
@@ -41,5 +43,11 @@
       display: block;
       flex: 0 0 auto;
     }
+  }
+  
+  &:hover,
+  &:active {
+    opacity: 1;
+    .transition();
   }
 }
